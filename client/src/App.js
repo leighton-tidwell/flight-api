@@ -11,6 +11,7 @@ import Navigation from "./components/Navigation";
 import HomePage from "./pages/HomePage";
 import SearchResults from "./pages/SearchResults";
 import Airport from "./pages/Airport";
+import About from "./pages/About";
 import Footer from "./components/Footer";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             )}
           />
           <Route path="/airport/:id" component={() => <Airport />} />
+          <Route path="/about" exact component={() => <About />} />
         </Switch>
       </Router>
       <Footer />

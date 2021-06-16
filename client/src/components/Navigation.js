@@ -5,9 +5,7 @@ function Navigation() {
   return (
     <div className="navigation-container">
       <Link to="/">Search</Link>
-      <Link to="/api">API</Link>
-      <Link to="/flightplanner">Flight Planner</Link>
-      <Link to="/about">About</Link>
+      <Link to="/about">API</Link>
     </div>
   );
 }

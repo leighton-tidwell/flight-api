@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
     return (
-        <section className="footer">
-            Created by: @leighton-tidwell
-        </section>
+        <footer className="footer">
+            Created by: <a href="https://github.com/leighton-tidwell">@leighton-tidwell</a>
+        </footer>
     )
 }
 

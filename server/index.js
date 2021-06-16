@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const mongoSanitize = require('express-mongo-sanitize');
+const mongoSanitize = require("express-mongo-sanitize");
 const app = express();
 const port = 8000;
 const db = require("./database");
@@ -19,6 +19,13 @@ app.get("/api/search/:search", (req, res) => {
     .then((results) => res.json(results));
 });
 
+app.get("/api/faa/:faa", (req, res) => {
+  db.airports
+    .find({ 'ident': `${req.params.faa}` })
+    .exec()
+    .then((results) => res.json(results));
+});
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
+  console.log(`Flight API listening on port ${port}!`);
 });
