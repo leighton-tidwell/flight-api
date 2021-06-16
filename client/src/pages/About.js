@@ -8,7 +8,7 @@ function About(props) {
         <div className="about-description">
           <p className="about-about">
             Flight API is a simple airport API service that allows developers to
-            query airport information for free. Information on how to use this
+            query basic airport information for free. Information on how to use this
             API can be found below.
           </p>
           <p className="about-api">
@@ -23,7 +23,7 @@ function About(props) {
               &nbsp;&nbsp;0:&#123;
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;continent: "NA", <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;coordinates: "-76.866997, 38.810799",{" "}
+              &nbsp;&nbsp;&nbsp;&nbsp;coordinates: "-76.866997, 38.810799",
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;elevation_ft: "280", <br />
               &nbsp;&nbsp;&nbsp;&nbsp;gps_code: "KADW", <br />
