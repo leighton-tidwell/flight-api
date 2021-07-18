@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function SearchResult(props) {
+const SearchResult = (props) => {
   const information = props.information;
 
   return (
@@ -20,6 +20,6 @@ function SearchResult(props) {
       </div>
     </div>
   );
-}
+};
 
 export default SearchResult;

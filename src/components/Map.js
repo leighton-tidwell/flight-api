@@ -1,15 +1,14 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 
-function ChangeMapView({coords}) {
+const ChangeMapView = ({ coords }) => {
   const map = useMap();
   map.setView(coords, map.getZoom());
 
   return null;
-}
+};
 
-
-function Map(props) {
+const Map = (props) => {
   return (
     <>
       <MapContainer
@@ -26,10 +25,12 @@ function Map(props) {
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
         </Marker>
-        <ChangeMapView coords={[props.coordinates.lat, props.coordinates.lon]} />
+        <ChangeMapView
+          coords={[props.coordinates.lat, props.coordinates.lon]}
+        />
       </MapContainer>
     </>
   );
-}
+};
 
 export default Map;

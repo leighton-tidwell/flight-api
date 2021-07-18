@@ -1,6 +1,6 @@
 import React from "react";
 
-function InfoModule() {
+const InfoModule = () => {
   return (
     <section className="info-container">
       <div className="info-header">What is Flight API?</div>
@@ -12,6 +12,6 @@ function InfoModule() {
       </div>
     </section>
   );
-}
+};
 
 export default InfoModule;

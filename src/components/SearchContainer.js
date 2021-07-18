@@ -2,18 +2,18 @@ import React from "react";
 import { useState } from "react";
 import { useHistory, withRouter } from "react-router-dom";
 
-function SearchContainer(props) {
+const SearchContainer = (props) => {
   const history = useHistory();
   const [search, setSearch] = useState("" || props.currentSearch);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setSearch(e.target.value);
-  }
+  };
 
   const handleSubmit = () => {
-    props.submit(search)
-    history.push('/search');
-  }
+    props.submit(search);
+    history.push("/search");
+  };
 
   return (
     <section className="search-container">
@@ -34,6 +34,6 @@ function SearchContainer(props) {
       </div>
     </section>
   );
-}
+};
 
 export default withRouter(SearchContainer);

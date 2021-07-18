@@ -1,6 +1,6 @@
 import React from "react";
 
-function About(props) {
+const About = (props) => {
   return (
     <>
       <div className="about-container">
@@ -8,8 +8,8 @@ function About(props) {
         <div className="about-description">
           <p className="about-about">
             Flight API is a simple airport API service that allows developers to
-            query basic airport information for free. Information on how to use this
-            API can be found below.
+            query basic airport information for free. Information on how to use
+            this API can be found below.
           </p>
           <p className="about-api">
             <span class="about-bold">Current API Usage:</span>
@@ -72,6 +72,6 @@ function About(props) {
       </div>
     </>
   );
-}
+};
 
 export default About;

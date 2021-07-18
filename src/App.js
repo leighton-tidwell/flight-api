@@ -14,13 +14,15 @@ import Airport from "./pages/Airport";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 
-function App() {
+const DOMAIN = process.env.DOMAIN;
+
+const App = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [currentSearch, setCurrentSearch] = useState("");
 
   const submitSearch = (query) => {
     if (!query) return console.log("Query empty");
-    axios.get(`http://localhost:8000/api/search/${query}`).then((res) => {
+    axios.get(`${DOMAIN}api/search/${query}`).then((res) => {
       setSearchResults(res.data);
       setCurrentSearch(query);
     });
@@ -59,6 +61,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

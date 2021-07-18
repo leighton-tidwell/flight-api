@@ -4,7 +4,9 @@ import axios from "axios";
 
 import Map from "../components/Map";
 
-function Airport(props) {
+const DOMAIN = process.env.DOMAIN;
+
+const Airport = (props) => {
   const [airport, setAirport] = useState({});
   const [coordinates, setCoordinates] = useState({
     lon: 0,
@@ -14,7 +16,7 @@ function Airport(props) {
 
   useEffect(() => {
     if (!id) return console.log("ID empty");
-    axios.get(`http://localhost:8000/api/faa/${id}`).then((res) => {
+    axios.get(`${DOMAIN}api/faa/${id}`).then((res) => {
       const airportres = res.data[0];
       const coordinates = airportres.coordinates.split(", ");
 
@@ -85,6 +87,6 @@ function Airport(props) {
       </section>
     </>
   );
-}
+};
 
 export default Airport;
