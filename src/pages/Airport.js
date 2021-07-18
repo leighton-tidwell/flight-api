@@ -4,7 +4,7 @@ import axios from "axios";
 
 import Map from "../components/Map";
 
-const DOMAIN = process.env.DOMAIN;
+const DOMAIN = process.env.REACT_APP_DOMAIN;
 
 const Airport = (props) => {
   const [airport, setAirport] = useState({});

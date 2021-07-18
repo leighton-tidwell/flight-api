@@ -14,7 +14,7 @@ import Airport from "./pages/Airport";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 
-const DOMAIN = process.env.DOMAIN;
+const DOMAIN = process.env.REACT_APP_DOMAIN;
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
