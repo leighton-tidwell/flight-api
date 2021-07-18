@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
@@ -27,10 +27,6 @@ const App = () => {
       setCurrentSearch(query);
     });
   };
-
-  useEffect(() => {
-    console.log(searchResults);
-  }, [searchResults]);
 
   return (
     <>

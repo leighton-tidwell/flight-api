@@ -25,7 +25,6 @@ const Airport = (props) => {
         lon: Number(coordinates[0]),
         lat: Number(coordinates[1]),
       });
-      console.log("fetched", res.data);
     });
   }, [id]);
 
